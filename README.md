@@ -120,7 +120,7 @@
 | fecha  | Fecha | No | No | Ninguno | Fecha actual del pedido |
 
 ##  Diagrama Entidad-Relación
-    ...
+    <img src="https://github.com/rescobedoq/pw2/blob/main/epis.png?raw=true" alt="EPIS" style="width:80%; height:auto"/>
 
 ##  Administración con Django
     Se muestran los pasos realizados para crear el Proyecto, la aplicación, creacion de modelos, migraciones y habilitación del panel de administración en Django.
