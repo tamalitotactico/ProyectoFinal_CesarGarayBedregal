@@ -85,9 +85,9 @@
 ##  Modelo de datos
     El modelo de datos esta conformado por las siguientes entidades.
 
-    -   Curso : En esta entidad se almacena la información de los cursos o asignaturas que se imparten en una Escuela Profesional. Ejemplo: Programación Web 2, III semestre, 02 horas teóricas, 04 horas de laboratorio, etc..
-    -   Profesor : En esta entidad se almacena los datos de los profesores que se responsabilizan del avance académico en la enseñanza de los temas planificados en cada curso. Ejemplo: Richart Escobedo, rescobedoq@unsa.edu.pe, Magister, etc.
-
+    -   user : En esta entidad se almacena la información de su nombre, dni, email, password, birthdate, adress.
+    -   platillo : En esta entidad se almacena información acerca de los distintos platillos que se ofrecen en el negocio, como el nombre del platillo, precio y si se encuentra disponible o no (Booleano).
+    -   pedido : En esta entidad se almacena los datos tanto de una id propia del pedido, el usuario que hace el pedido (clave foranea), y la fecha actual cuando se cree una instancia del pedido.
     ...
 
 ##  Diccionario de datos
