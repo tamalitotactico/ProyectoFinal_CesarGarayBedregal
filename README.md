@@ -94,21 +94,30 @@
 
     En la construcción de software y en el diccionario de datos sobre todo se recomienda y se utilizará el idioma inglés para especificar objetos, atributos, etc.
 
-| Course | | | | | |
+| user | | | | | |
 | -- | -- | -- | -- | -- | -- |
 | Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
-| code  | Numerico| No | Si | Ninguno | Código |
-| name  | Cadena| No | No | Ninguno | Nombre |
-...
+| name  | Cadena| No | No | Ninguno | Nombre del usuario |
+| dni  | Numerico| No | Si | Ninguno | Dni del usuario |
+| email  | correo| No | No | Ninguno | Correo del usuario |
+| password  | Cadena| No | No | Ninguno | Contraseña del usuario |
+| birthdate  | Fecha| Si | No | Ninguno | Fecha de nacimiento |
+| adress  | Cadena| No | No | Ninguno | Dirección |
 
-| Teacher | | | | | |
+
+| platillo  | | | | | |
 | -- | -- | -- | -- | -- | -- |
 | Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
-| code  | Numerico| No | Si | Ninguno | Código |
-| name | Cadena| No | No | Ninguno | Nombres |
-| email | Cadena| No | No | Ninguno | Correo electrónico |
-| gender | Fecha| Si | No | NULL | Fecha de nacimiento |
-...
+| name  | Cadena| No | No | Ninguno | Nombre del platillo |
+| precio  | Numerico| No | Si | Ninguno | Precio del platillo |
+| disponible  | booleano | No | No | Ninguno | Disponibilidad actual |
+
+| pedido  | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| id  | Numerico| No | No | Ninguno | ID del pedido |
+| user  | ForeignKey | No | Si | Ninguno | Llamada a un usuario |
+| fecha  | Fecha | No | No | Ninguno | Fecha actual del pedido |
 
 ##  Diagrama Entidad-Relación
     ...
@@ -120,8 +129,8 @@
 ##  Plantillas Bootstrap
     Se seleccionó la siguiente plantilla para el usuario final (No administrador).
 
-    Demo online:
-    URL: ...
+    Demo online: https://technext.github.io/hexashop/index.html
+    URL: (https://themewagon.com/themes/hexashop-free-responsive-bootstrap-4-ecommerce-website-template/)
 
     Se muestran las actividades realizadas para adecuación de plantillas, vistas, formularios en Django.
     ...
