@@ -18,6 +18,6 @@ class platillo(models.Model):
 
 class pedido(models.Model):
     id = models.BigAutoField(primary_key=True)
-    user = models.ForeignKey(user, on_delete=models.CASCADE)
+    user = models.CharField(max_length=50)
     fecha = models.DateField()
 

@@ -17,6 +17,8 @@ from re import template
 from django.contrib import admin
 from django.urls import path
 from app1.views import index, contacto, about
+from django.config import settings
+from django.config.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,4 @@ urlpatterns = [
     path('index.html',index),
     path('contact.html',contacto),
     path('about.html',about)
-]
+] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
