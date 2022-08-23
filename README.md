@@ -72,11 +72,16 @@
 ##  Requisitos del sistema
     El sistema debe satisfacer los siguientes requisitos funcionales y no funcionales:
 
-    - RQ01 : El sistema debe estar disponible en Internet a traves de una URL.
-    - RQ02 : El sistema debe permitir el inicio/cierre de sesión.
-    - RQ03 : El sistema debe permitir gestionar el año académico, cursos, profesores y las asignaciones de carga académica.
-    -   ...
-
+    - RQ01 : El sistema debe estar disponible en Internet a traves de una URL
+    - RQ02 : El sistema debe tener una interfaz entendible para todo tipo de público
+    - RQ03 : El sistema debe tener una interfaz responsiva
+    - RQ04 : El sistema debe trabajar con el sistema de pago utilizado actualmente por el cliente(yape, efectivo)
+    - RQ05 : El sistema debe tener una interfaz y formulario de registro, tal que al guardar los datos ingresados por el usuario
+    - RQ06 : El sistema debe autenticar la identidad del usuario para evitar realizar pedidos no reales o fraudulentos
+    - RQ07 : El sistema debe presentar todo lo ofrecido por el negocio del cliente de manera organizada y actualizada.
+    - RQ08 : El sistema debe hacer llegar los detalles del pedido al dueño del negocio, mostrando datos del usuario, dirección, pedido y pago.
+    - RQ09 : El sistema debe facilitar el contacto con el dueño del negocio en las diferentes plataformas (Whatsapp, Messenger, teléfono  de contacto) y el mismo sistema.
+    
 ##  Modelo de datos
     El modelo de datos esta conformado por las siguientes entidades.
 
