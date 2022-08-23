@@ -72,38 +72,52 @@
 ##  Requisitos del sistema
     El sistema debe satisfacer los siguientes requisitos funcionales y no funcionales:
 
-    - RQ01 : El sistema debe estar disponible en Internet a traves de una URL.
-    - RQ02 : El sistema debe permitir el inicio/cierre de sesión.
-    - RQ03 : El sistema debe permitir gestionar el año académico, cursos, profesores y las asignaciones de carga académica.
-    -   ...
-
+    - RQ01 : El sistema debe estar disponible en Internet a traves de una URL
+    - RQ02 : El sistema debe tener una interfaz entendible para todo tipo de público
+    - RQ03 : El sistema debe tener una interfaz responsiva
+    - RQ04 : El sistema debe trabajar con el sistema de pago utilizado actualmente por el cliente(yape, efectivo)
+    - RQ05 : El sistema debe tener una interfaz y formulario de registro, tal que al guardar los datos ingresados por el usuario
+    - RQ06 : El sistema debe autenticar la identidad del usuario para evitar realizar pedidos no reales o fraudulentos
+    - RQ07 : El sistema debe presentar todo lo ofrecido por el negocio del cliente de manera organizada y actualizada.
+    - RQ08 : El sistema debe hacer llegar los detalles del pedido al dueño del negocio, mostrando datos del usuario, dirección, pedido y pago.
+    - RQ09 : El sistema debe facilitar el contacto con el dueño del negocio en las diferentes plataformas (Whatsapp, Messenger, teléfono  de contacto) y el mismo sistema.
+    
 ##  Modelo de datos
     El modelo de datos esta conformado por las siguientes entidades.
 
-    -   Curso : En esta entidad se almacena la información de los cursos o asignaturas que se imparten en una Escuela Profesional. Ejemplo: Programación Web 2, III semestre, 02 horas teóricas, 04 horas de laboratorio, etc..
-    -   Profesor : En esta entidad se almacena los datos de los profesores que se responsabilizan del avance académico en la enseñanza de los temas planificados en cada curso. Ejemplo: Richart Escobedo, rescobedoq@unsa.edu.pe, Magister, etc.
-
+    -   user : En esta entidad se almacena la información de su nombre, dni, email, password, birthdate, adress.
+    -   platillo : En esta entidad se almacena información acerca de los distintos platillos que se ofrecen en el negocio, como el nombre del platillo, precio y si se encuentra disponible o no (Booleano).
+    -   pedido : En esta entidad se almacena los datos tanto de una id propia del pedido, el usuario que hace el pedido (clave foranea), y la fecha actual cuando se cree una instancia del pedido.
     ...
 
 ##  Diccionario de datos
 
     En la construcción de software y en el diccionario de datos sobre todo se recomienda y se utilizará el idioma inglés para especificar objetos, atributos, etc.
 
-| Course | | | | | |
+| user | | | | | |
 | -- | -- | -- | -- | -- | -- |
 | Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
-| code  | Numerico| No | Si | Ninguno | Código |
-| name  | Cadena| No | No | Ninguno | Nombre |
-...
+| name  | Cadena| No | No | Ninguno | Nombre del usuario |
+| dni  | Numerico| No | Si | Ninguno | Dni del usuario |
+| email  | correo| No | No | Ninguno | Correo del usuario |
+| password  | Cadena| No | No | Ninguno | Contraseña del usuario |
+| birthdate  | Fecha| Si | No | Ninguno | Fecha de nacimiento |
+| adress  | Cadena| No | No | Ninguno | Dirección |
 
-| Teacher | | | | | |
+
+| platillo  | | | | | |
 | -- | -- | -- | -- | -- | -- |
 | Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
-| code  | Numerico| No | Si | Ninguno | Código |
-| name | Cadena| No | No | Ninguno | Nombres |
-| email | Cadena| No | No | Ninguno | Correo electrónico |
-| gender | Fecha| Si | No | NULL | Fecha de nacimiento |
-...
+| name  | Cadena| No | No | Ninguno | Nombre del platillo |
+| precio  | Numerico| No | Si | Ninguno | Precio del platillo |
+| disponible  | booleano | No | No | Ninguno | Disponibilidad actual |
+
+| pedido  | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| id  | Numerico| No | No | Ninguno | ID del pedido |
+| user  | ForeignKey | No | Si | Ninguno | Llamada a un usuario |
+| fecha  | Fecha | No | No | Ninguno | Fecha actual del pedido |
 
 ##  Diagrama Entidad-Relación
     ...
@@ -115,8 +129,8 @@
 ##  Plantillas Bootstrap
     Se seleccionó la siguiente plantilla para el usuario final (No administrador).
 
-    Demo online:
-    URL: ...
+    Demo online: https://technext.github.io/hexashop/index.html
+    URL: (https://themewagon.com/themes/hexashop-free-responsive-bootstrap-4-ecommerce-website-template/)
 
     Se muestran las actividades realizadas para adecuación de plantillas, vistas, formularios en Django.
     ...
