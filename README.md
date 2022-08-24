@@ -67,7 +67,7 @@
 [![Java][Java]][java-site]
 
 ##  Tipo de Sistema
-    Se trata de una aplicación web construida con el framework Django 4, que permita la inscripción de los alumnos en los horarios de laboratorios establecidos cada inicio de semestre.
+    Se trata de una aplicación web construida con el framework Django, que permita la visualización de los productos ofrecidos por un cliente, y permita al usuario recibir una carta personalizada al igual que realizar una orden/pedido por medio del aplicativo. 
 
 ##  Requisitos del sistema
     El sistema debe satisfacer los siguientes requisitos funcionales y no funcionales:
